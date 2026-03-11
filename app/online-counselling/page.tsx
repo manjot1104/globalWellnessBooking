@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Online Counselling - How It Works - MindCare',
-  description: 'Learn how online counselling works at MindCare. Choose from video calls, phone sessions, or chat-based therapy.',
+  title: 'Online Counselling - How It Works - Global Wellness',
+  description: 'Learn how online counselling works at Global Wellness. Choose from video calls, phone sessions, or chat-based therapy.',
 }
 
 const steps = [

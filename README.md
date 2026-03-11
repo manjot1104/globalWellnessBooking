@@ -1,4 +1,4 @@
-# MindCare - Mental Health Counselling Website
+# Global Wellness - Mental Health Counselling Website
 
 A modern, responsive mental health counselling website built with Next.js, React, and Tailwind CSS.
 

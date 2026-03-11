@@ -2,13 +2,13 @@ const testimonials = [
   {
     name: 'Priya Sharma',
     role: 'Client',
-    content: 'MindCare has been a lifesaver. The convenience of online sessions and the expertise of my therapist helped me overcome my anxiety. Highly recommended!',
+    content: 'Global Wellness has been a lifesaver. The convenience of online sessions and the expertise of my therapist helped me overcome my anxiety. Highly recommended!',
     rating: 5,
   },
   {
     name: 'Rajesh Kumar',
     role: 'Client',
-    content: 'I was skeptical about online counselling, but MindCare exceeded my expectations. The sessions are private, professional, and truly effective.',
+    content: 'I was skeptical about online counselling, but Global Wellness exceeded my expectations. The sessions are private, professional, and truly effective.',
     rating: 5,
   },
   {

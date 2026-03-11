@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'About Us - MindCare Mental Health Counselling',
-  description: 'Learn about MindCare, our mission, values, and team of expert therapists dedicated to your mental health.',
+  title: 'About Us - Global Wellness Mental Health Counselling',
+  description: 'Learn about Global Wellness, our mission, values, and team of expert therapists dedicated to your mental health.',
 }
 
 export default function AboutPage() {
@@ -12,7 +12,7 @@ export default function AboutPage() {
       <section className="bg-gradient-to-br from-primary-50 to-secondary-50 section-padding">
         <div className="container-custom">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 text-center">
-            About <span className="text-primary-600">MindCare</span>
+            About <span className="text-primary-600">Global Wellness</span>
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto text-center">
             We're committed to making professional mental health support accessible, affordable, and effective for everyone.
@@ -29,7 +29,7 @@ export default function AboutPage() {
                 Our Mission
               </h2>
               <p className="text-lg text-gray-600 mb-4 leading-relaxed">
-                At MindCare, we believe that mental health is just as important as physical health. 
+                At Global Wellness, we believe that mental health is just as important as physical health. 
                 Our mission is to break down barriers to mental health care by providing accessible, 
                 high-quality online counselling services.
               </p>

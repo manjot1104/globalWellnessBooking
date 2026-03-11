@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Blog - Mental Health Articles - MindCare',
+  title: 'Blog - Mental Health Articles - Global Wellness',
   description: 'Read our latest articles on mental health, therapy, anxiety, depression, relationships, and wellness tips.',
 }
 

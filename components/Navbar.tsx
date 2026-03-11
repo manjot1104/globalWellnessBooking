@@ -40,7 +40,7 @@ export default function Navbar() {
             <div className="w-10 h-10 bg-primary-500 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-xl">M</span>
             </div>
-            <span className="text-2xl font-bold text-primary-600">MindCare</span>
+            <span className="text-2xl font-bold text-primary-600">Global Wellness</span>
           </Link>
 
           {/* Desktop Navigation */}

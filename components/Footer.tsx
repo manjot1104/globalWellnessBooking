@@ -28,7 +28,7 @@ export default function Footer() {
               <div className="w-10 h-10 bg-primary-500 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-xl">M</span>
               </div>
-              <span className="text-2xl font-bold">MindCare</span>
+              <span className="text-2xl font-bold">Global Wellness</span>
             </div>
             <p className="text-gray-300 mb-4">
               Professional online mental health counselling services. Your journey to wellness starts here.
@@ -81,7 +81,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-primary-800 mt-8 pt-8 text-center text-gray-300">
-          <p>&copy; {new Date().getFullYear()} MindCare. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Global Wellness. All rights reserved.</p>
         </div>
       </div>
     </footer>
