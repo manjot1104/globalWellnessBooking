@@ -129,7 +129,7 @@ export default function ServicesPage() {
                       ))}
                     </ul>
                   </div>
-                  <Link href="/book-appointment" className="btn-primary inline-block">
+                  <Link href="/online-counselling" className="btn-primary inline-block">
                     Book a Session
                   </Link>
                 </div>
@@ -155,7 +155,7 @@ export default function ServicesPage() {
           <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
             Book a session with one of our expert therapists and take the first step towards better mental health.
           </p>
-          <Link href="/book-appointment" className="bg-white text-primary-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 inline-block">
+          <Link href="/online-counselling" className="bg-white text-primary-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 inline-block">
             Book Your Appointment
           </Link>
         </div>

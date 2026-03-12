@@ -16,10 +16,10 @@ export default function Hero() {
               Get support from licensed therapists in a safe, confidential environment.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Link href="/book-appointment" className="btn-primary text-center">
+              <Link href="/online-counselling" className="btn-primary text-center">
                 Book Your Session
               </Link>
-              <Link href="/online-counselling" className="btn-secondary text-center">
+              <Link href="/about" className="btn-secondary text-center">
                 Learn More
               </Link>
             </div>

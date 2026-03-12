@@ -88,30 +88,69 @@ export default function AboutPage() {
       <section id="therapists" className="section-padding bg-gray-50">
         <div className="container-custom">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Our <span className="text-primary-600">Expert Team</span>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 font-serif">
+              Meet Our Team of Expert <span className="text-primary-600">Psychologists</span>
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Licensed professionals with years of experience in mental health counselling
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto italic">
+              Every face here is someone ready to listen, understand, and walk with you through your healing journey.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
-              { name: 'Dr. Sarah Johnson', role: 'Clinical Psychologist', specialization: 'Anxiety & Depression', exp: '10+ years' },
-              { name: 'Dr. Michael Chen', role: 'Marriage & Family Therapist', specialization: 'Relationships', exp: '8+ years' },
-              { name: 'Dr. Emily Rodriguez', role: 'Child Psychologist', specialization: 'Child & Adolescent', exp: '12+ years' },
-              { name: 'Dr. James Wilson', role: 'Licensed Counsellor', specialization: 'Stress Management', exp: '15+ years' },
-              { name: 'Dr. Lisa Anderson', role: 'Trauma Specialist', specialization: 'PTSD & Trauma', exp: '9+ years' },
-              { name: 'Dr. David Kim', role: 'Career Counsellor', specialization: 'Career Development', exp: '7+ years' },
+              { 
+                name: 'Dr. Priyanka Kalra', 
+                role: 'Psychiatrist',
+              },
+              { 
+                name: 'Dr. Sunil Kumar', 
+                role: 'Psychologist & CBT Therapist',
+              },
+              { 
+                name: 'Dr. Mitali Sharma', 
+                role: 'Clinical Psychologist',
+              },
+              { 
+                name: 'Dr. Ritu', 
+                role: 'Psychologist',
+              },
+              { 
+                name: 'Dr. Vanita Kumari', 
+                role: 'Psychologist',
+              },
+              { 
+                name: 'Prithvi Padam', 
+                role: 'Psychologist',
+              },
+              { 
+                name: 'Priyanka Leekha', 
+                role: 'Counselling Psychologist',
+              },
+              { 
+                name: 'Ramandeep Kaur', 
+                role: 'Psychologist',
+              },
             ].map((member, index) => (
-              <div key={index} className="card p-6 text-center">
-                <div className="w-24 h-24 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-4xl">👤</span>
+              <div key={index} className="relative group overflow-hidden rounded-lg">
+                {/* Image Container */}
+                <div className="aspect-[3/4] bg-gradient-to-br from-primary-200 to-secondary-300 flex items-center justify-center relative">
+                  <div className="text-8xl opacity-50">
+                    {member.name.includes('Sunil') || member.name.includes('Prithvi') ? '👨‍⚕️' : '👩‍⚕️'}
+                  </div>
+                  {/* Overlay on hover */}
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300"></div>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">{member.name}</h3>
-                <p className="text-primary-600 font-medium mb-2">{member.role}</p>
-                <p className="text-gray-600 text-sm mb-2">{member.specialization}</p>
-                <p className="text-gray-500 text-xs">{member.exp} Experience</p>
+                {/* Name Banner - Light Blue */}
+                <div className="absolute bottom-12 left-0 right-0 bg-primary-400/90 backdrop-blur-sm px-3 py-2">
+                  <h3 className="text-white font-semibold text-sm md:text-base text-center">
+                    {member.name}
+                  </h3>
+                </div>
+                {/* Role Banner - Black */}
+                <div className="absolute bottom-0 left-0 right-0 bg-gray-900 px-3 py-2">
+                  <p className="text-white font-medium text-xs md:text-sm text-center">
+                    {member.role}
+                  </p>
+                </div>
               </div>
             ))}
           </div>

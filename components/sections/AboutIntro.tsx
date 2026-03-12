@@ -25,7 +25,7 @@ export default function AboutIntro() {
           </div>
           <div className="grid grid-cols-2 gap-4">
             <div className="card p-6 text-center">
-              <div className="text-4xl font-bold text-primary-600 mb-2">500+</div>
+              <div className="text-4xl font-bold text-primary-600 mb-2">24,587</div>
               <div className="text-gray-600">Happy Clients</div>
             </div>
             <div className="card p-6 text-center">

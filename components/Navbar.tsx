@@ -55,7 +55,7 @@ export default function Navbar() {
               </Link>
             ))}
             <Link
-              href="/book-appointment"
+              href="/online-counselling"
               className="btn-primary"
             >
               Book Appointment
@@ -100,7 +100,7 @@ export default function Navbar() {
               </Link>
             ))}
             <Link
-              href="/book-appointment"
+              href="/online-counselling"
               className="block mt-4 btn-primary text-center"
               onClick={() => setIsMobileMenuOpen(false)}
             >

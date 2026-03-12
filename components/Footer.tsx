@@ -15,7 +15,7 @@ export default function Footer() {
     { href: '/blog', label: 'Blog' },
     { href: '/contact', label: 'Contact Us' },
     { href: '/faq', label: 'FAQ' },
-    { href: '/book-appointment', label: 'Book Appointment' },
+    { href: '/online-counselling', label: 'Book Appointment' },
   ]
 
   return (

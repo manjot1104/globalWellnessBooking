@@ -2,22 +2,22 @@ import Link from 'next/link'
 
 const blogPosts = [
   {
-    title: 'Understanding Anxiety: Signs, Symptoms, and Coping Strategies',
-    excerpt: 'Learn about anxiety disorders and discover effective techniques to manage anxiety in your daily life.',
-    date: 'March 15, 2024',
-    image: '📝',
+    title: 'Benefits of Online Psychiatrist Medical Doctor Consultation',
+    excerpt: 'Mental health conditions such as depression, anxiety disorders, bipolar disorder, and panic disorders often require specialized medical care. A psychiatrist medical doctor is uniquely qualified to diagnose mental health conditions, prescribe medication, and provide ongoing treatment.',
+    date: 'February 18, 2026',
+    image: '👩‍⚕️',
   },
   {
-    title: 'The Benefits of Online Therapy: A Modern Approach to Mental Health',
-    excerpt: 'Explore how online counselling can provide accessible and effective mental health support.',
-    date: 'March 10, 2024',
+    title: 'What to Expect from Your First Online Therapy Session for Mental Health',
+    excerpt: 'Starting therapy is an important step toward improving mental health, but it can also feel intimidating—especially if it\'s your first time. Many individuals worry about what to say, how the session will go, or whether online counseling will be effective.',
+    date: 'February 18, 2026',
     image: '💻',
   },
   {
-    title: 'Building Stronger Relationships Through Communication',
-    excerpt: 'Discover key communication strategies that can help improve your relationships with loved ones.',
-    date: 'March 5, 2024',
-    image: '💑',
+    title: 'Online Anger Management Psychologist: Techniques That Work',
+    excerpt: 'Anger is a natural human emotion, but when it becomes frequent, intense, or difficult to control, it can negatively affect mental health, relationships, and overall quality of life.',
+    date: 'February 18, 2026',
+    image: '📝',
   },
 ]
 
