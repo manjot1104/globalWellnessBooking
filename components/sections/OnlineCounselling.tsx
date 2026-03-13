@@ -131,7 +131,7 @@ export default function OnlineCounselling() {
                     ))}
                   </ul>
                   <Link
-                    href="/book-appointment"
+                    href="/online-counselling"
                     className="mt-6 btn-primary text-center block w-full"
                   >
                     Book Online Counselling

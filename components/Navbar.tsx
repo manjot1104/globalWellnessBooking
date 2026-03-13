@@ -88,20 +88,22 @@ export default function Navbar() {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden py-4 border-t border-gray-200">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="block py-2 text-gray-700 hover:text-primary-600 font-medium transition-colors"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                {link.label}
-              </Link>
-            ))}
+          <div className="md:hidden py-6 px-4 sm:px-6 border-t border-gray-200">
+            <nav className="flex flex-col gap-1" aria-label="Mobile navigation">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="block py-3 px-2 text-gray-700 hover:text-primary-600 hover:bg-primary-50 font-medium transition-colors rounded-lg text-base"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </nav>
             <Link
               href="/online-counselling"
-              className="block mt-4 btn-primary text-center"
+              className="block mt-4 py-3 px-6 btn-primary text-center rounded-lg"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Book Appointment

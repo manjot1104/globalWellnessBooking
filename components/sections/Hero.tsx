@@ -48,7 +48,7 @@ export default function Hero() {
               Explore Our Experts
             </Link>
             <Link
-              href="/book-appointment"
+              href="/online-counselling"
               className="bg-primary-500 hover:bg-primary-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg text-center"
             >
               Start Your Healing Journey
@@ -57,8 +57,8 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Circular "Global Wellness" – right side on desktop, below content on mobile */}
-      <div className="absolute right-4 md:right-8 lg:right-12 bottom-8 md:bottom-12 z-10 flex justify-end md:justify-center">
+      {/* Circular "Global Wellness" – top-right on mobile (no overlap), bottom-right on desktop */}
+      <div className="absolute top-24 right-4 z-10 md:top-auto md:right-8 md:bottom-12 lg:right-12">
         <div className="text-white drop-shadow-lg">
           <CircularText
             text="GLOBAL*WELLNESS*"

@@ -15,7 +15,7 @@ export default function Footer() {
     { href: '/blog', label: 'Blog' },
     { href: '/contact', label: 'Contact Us' },
     { href: '/faq', label: 'FAQ' },
-    { href: '/book-appointment', label: 'Book Appointment' },
+    { href: '/online-counselling', label: 'Book Appointment' },
   ]
 
   return (
@@ -57,7 +57,7 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4">Useful Links</h3>
             <ul className="space-y-2">
               {usefulLinks.map((link) => (
-                <li key={link.href}>
+                <li key={link.label}>
                   <Link
                     href={link.href}
                     className="text-gray-300 hover:text-white transition-colors"
