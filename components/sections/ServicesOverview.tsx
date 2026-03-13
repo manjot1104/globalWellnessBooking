@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import ServiceCardVideo from '@/components/ServiceCardVideo'
 
 const services = [
   {
@@ -6,36 +7,42 @@ const services = [
     description: 'Learn effective strategies to manage anxiety, panic attacks, and worry.',
     icon: '🧘',
     href: '/services#anxiety',
+    video: '/assets/anxiety.mp4',
   },
   {
     title: 'Depression Counselling',
     description: 'Get support to overcome depression and regain your motivation for life.',
     icon: '💙',
     href: '/services#depression',
+    video: '/assets/depression.mp4',
   },
   {
     title: 'Relationship Counselling',
     description: 'Strengthen your relationships and improve communication with your partner.',
     icon: '💑',
     href: '/services#relationship',
+    video: '/assets/relationship.mp4',
   },
   {
     title: 'Stress Management',
     description: 'Develop healthy coping mechanisms to manage work and life stress.',
     icon: '🌿',
     href: '/services#stress',
+    video: '/assets/stress.mp4',
   },
   {
     title: 'Child Counselling',
     description: 'Support your child\'s emotional well-being with age-appropriate therapy.',
     icon: '👶',
     href: '/services#child',
+    video: '/assets/child.mp4',
   },
   {
     title: 'Career Counselling',
     description: 'Navigate career transitions and find clarity in your professional path.',
     icon: '💼',
     href: '/services#career',
+    video: '/assets/career.mp4',
   },
 ]
 
@@ -56,16 +63,23 @@ export default function ServicesOverview() {
             <Link
               key={index}
               href={service.href}
-              className="card p-6 hover:border-primary-300 border-2 border-transparent"
+              className="card p-0 overflow-hidden hover:border-primary-300 border-2 border-transparent flex flex-col"
             >
-              <div className="text-5xl mb-4">{service.icon}</div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                {service.title}
-              </h3>
-              <p className="text-gray-600 mb-4">{service.description}</p>
-              <span className="text-primary-600 font-medium hover:text-primary-700">
-                Learn More →
-              </span>
+              <ServiceCardVideo
+                src={service.video}
+                fallback={<span className="text-5xl">{service.icon}</span>}
+                className="w-full"
+                aspectRatio="video"
+              />
+              <div className="p-6 flex flex-col flex-1">
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                  {service.title}
+                </h3>
+                <p className="text-gray-600 mb-4 flex-1">{service.description}</p>
+                <span className="text-primary-600 font-medium hover:text-primary-700">
+                  Learn More →
+                </span>
+              </div>
             </Link>
           ))}
         </div>

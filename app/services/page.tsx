@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import ServiceCardVideo from '@/components/ServiceCardVideo'
 
 export const metadata: Metadata = {
   title: 'Our Services - Global Wellness Mental Health Counselling',
@@ -18,6 +19,7 @@ const services = [
       'Build confidence and resilience',
     ],
     icon: '🧘',
+    video: '/assets/anxiety.mp4',
   },
   {
     id: 'depression',
@@ -30,6 +32,7 @@ const services = [
       'Support and understanding',
     ],
     icon: '💙',
+    video: '/assets/depression.mp4',
   },
   {
     id: 'relationship',
@@ -42,6 +45,7 @@ const services = [
       'Navigate relationship transitions',
     ],
     icon: '💑',
+    video: '/assets/relationship.mp4',
   },
   {
     id: 'stress',
@@ -54,6 +58,7 @@ const services = [
       'Prevent burnout',
     ],
     icon: '🌿',
+    video: '/assets/stress.mp4',
   },
   {
     id: 'child',
@@ -66,6 +71,7 @@ const services = [
       'School-related support',
     ],
     icon: '👶',
+    video: '/assets/child.mp4',
   },
   {
     id: 'career',
@@ -78,6 +84,7 @@ const services = [
       'Goal setting and planning',
     ],
     icon: '💼',
+    video: '/assets/career.mp4',
   },
 ]
 
@@ -134,11 +141,11 @@ export default function ServicesPage() {
                   </Link>
                 </div>
                 <div className={index % 2 === 1 ? 'lg:order-1' : ''}>
-                  <div className="card p-8 bg-gradient-to-br from-primary-50 to-secondary-50">
-                    <div className="aspect-square flex items-center justify-center">
-                      <div className="text-9xl opacity-20">{service.icon}</div>
-                    </div>
-                  </div>
+                  <ServiceCardVideo
+                    src={service.video}
+                    fallback={<span className="text-9xl opacity-20">{service.icon}</span>}
+                    aspectRatio="square"
+                  />
                 </div>
               </div>
             ))}
