@@ -22,7 +22,7 @@ This folder contains photos of all therapists.
 | `vanita734722.jpeg` | Dr. Vanita Kumari |
 | `prithvipadam.jpeg` | Prithvi Padam |
 | `leekha.priyanka.jpeg` | Priyanka Leekha |
-| `lordslove89.jpeg` | Ramandeep Kaur |
+| `ramandeep.jpeg` | Ramandeep Kaur |
 
 If a file is missing, the card shows the default icon.
 
@@ -40,7 +40,7 @@ Based on therapist emails:
 - `prithvipadam.jpg` - Prithvi Padam
 - `leekha.priyanka.jpg` - Priyanka Leekha
 - `vanita734722.jpg` - Dr. Vanita Kumari
-- `lordslove89.jpg` - Ramandeep Kaur
+- `ramandeep.jpg` - Ramandeep Kaur
 - `mitalisharma61196.jpg` - Dr. Mitali Sharma
 - `rmudgil7198.jpg` - Dr. Ritu
 

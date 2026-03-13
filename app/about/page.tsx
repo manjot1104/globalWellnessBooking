@@ -106,7 +106,7 @@ export default function AboutPage() {
               { name: 'Dr. Vanita Kumari', role: 'Psychologist', image: '/therapists/vanita734722.jpeg' },
               { name: 'Prithvi Padam', role: 'Psychologist', image: '/therapists/prithvipadam.jpeg' },
               { name: 'Priyanka Leekha', role: 'Counselling Psychologist', image: '/therapists/leekha.priyanka.jpeg' },
-              { name: 'Ramandeep Kaur', role: 'Psychologist', image: '/therapists/lordslove89.jpeg' },
+              { name: 'Ramandeep Kaur', role: 'Psychologist', image: '/therapists/ramandeep.jpeg' },
             ].map((member, index) => (
               <AboutTherapistCard key={member.name} member={member} />
             ))}
