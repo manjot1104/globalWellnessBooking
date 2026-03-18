@@ -48,8 +48,8 @@ export default function ContactPage() {
         </svg>
       ),
       title: 'Email',
-      content: 'support@mindcare.com',
-      link: 'mailto:support@mindcare.com',
+      content: 'globalwellness127@gmail.com',
+      link: 'mailto:globalwellness127@gmail.com',
     },
     {
       icon: (
@@ -58,8 +58,8 @@ export default function ContactPage() {
         </svg>
       ),
       title: 'Phone',
-      content: '+1 (555) 123-4567',
-      link: 'tel:+15551234567',
+      content: '7696730604',
+      link: 'tel:7696730604',
     },
     {
       icon: (
@@ -69,7 +69,7 @@ export default function ContactPage() {
         </svg>
       ),
       title: 'Location',
-      content: '123 Wellness Street, Health City, HC 12345',
+      content: 'Global Wellness, 127, I – Block, Sarabha Nagar, Ludhiana',
       link: '#',
     },
   ]
