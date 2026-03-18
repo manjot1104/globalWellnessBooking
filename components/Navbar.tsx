@@ -29,7 +29,7 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-white shadow-lg'
+          ? 'bg-gray-900 shadow-lg text-white'
           : 'bg-white/95 backdrop-blur-sm'
       }`}
     >
@@ -37,10 +37,10 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-primary-500 rounded-lg flex items-center justify-center">
+            <div className={`w-10 h-10 rounded-lg flex items-center justify-center ${isScrolled ? 'bg-primary-500' : 'bg-primary-500'}`}>
               <span className="text-white font-bold text-xl">M</span>
             </div>
-            <span className="text-2xl font-bold text-primary-600">Global Wellness</span>
+            <span className={`text-2xl font-bold ${isScrolled ? 'text-white' : 'text-primary-600'}`}>Global Wellness</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -49,14 +49,14 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-gray-700 hover:text-primary-600 font-medium transition-colors duration-200"
+                className={`font-medium transition-colors duration-200 ${isScrolled ? 'text-gray-300 hover:text-white' : 'text-gray-700 hover:text-primary-600'}`}
               >
                 {link.label}
               </Link>
             ))}
             <Link
               href="/online-counselling"
-              className="btn-primary"
+              className={isScrolled ? 'bg-primary-500 hover:bg-primary-400 text-white font-semibold py-2 px-5 rounded-lg transition-all duration-300' : 'btn-primary'}
             >
               Book Appointment
             </Link>
@@ -88,13 +88,13 @@ export default function Navbar() {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden py-6 px-4 sm:px-6 border-t border-gray-200">
+          <div className={`md:hidden py-6 px-4 sm:px-6 border-t ${isScrolled ? 'border-gray-700' : 'border-gray-200'}`}>
             <nav className="flex flex-col gap-1" aria-label="Mobile navigation">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="block py-3 px-2 text-gray-700 hover:text-primary-600 hover:bg-primary-50 font-medium transition-colors rounded-lg text-base"
+                  className={`block py-3 px-2 font-medium transition-colors rounded-lg text-base ${isScrolled ? 'text-gray-300 hover:text-white hover:bg-gray-800' : 'text-gray-700 hover:text-primary-600 hover:bg-primary-50'}`}
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {link.label}

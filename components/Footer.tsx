@@ -80,9 +80,9 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-primary-800 mt-8 pt-8 text-center text-gray-300">
-          <p>&copy; {new Date().getFullYear()} Global Wellness. All rights reserved.</p>
-        </div>
+      </div>
+      <div className="border-t border-gray-800 bg-black py-6 text-center text-gray-400">
+        <p>&copy; {new Date().getFullYear()} Global Wellness. All rights reserved.</p>
       </div>
     </footer>
   )

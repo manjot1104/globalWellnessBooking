@@ -26,14 +26,14 @@ export default function ServiceCardVideo({
   }
 
   return (
-    <div className={`rounded-xl overflow-hidden ${aspectRatio === 'square' ? 'aspect-square' : 'aspect-video'} bg-gray-200 ${className}`}>
+    <div className={`relative rounded-xl overflow-hidden ${aspectRatio === 'square' ? 'aspect-square' : 'aspect-video'} bg-gray-200 ${className}`}>
       <video
         src={src}
         muted
         loop
         playsInline
         autoPlay
-        className="w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-cover min-w-full min-h-full"
         onError={() => setError(true)}
         aria-hidden
       />

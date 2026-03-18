@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 export default function ContactCTA() {
   return (
-    <section className="section-padding bg-gradient-to-r from-primary-600 to-secondary-600">
+    <section className="section-padding bg-gradient-to-r from-primary-600 via-primary-800 to-gray-900">
       <div className="container-custom">
         <div className="text-center text-white">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
