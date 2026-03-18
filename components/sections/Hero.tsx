@@ -14,6 +14,7 @@ export default function Hero() {
           loop
           playsInline
           className="absolute inset-0 w-full h-full object-cover"
+          style={{ objectPosition: 'center 10%' }}
           aria-hidden
         >
           <source src={HERO_VIDEO_SRC} type="video/mp4" />
@@ -21,6 +22,11 @@ export default function Hero() {
         {/* Dark overlay for text readability */}
         <div
           className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30"
+          aria-hidden
+        />
+        {/* Bottom overlay to hide Grok logo */}
+        <div
+          className="absolute bottom-0 left-0 right-0 h-48 md:h-64 bg-gradient-to-t from-gray-900 via-gray-900/90 to-transparent z-0"
           aria-hidden
         />
       </div>
@@ -42,7 +48,7 @@ export default function Hero() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
-              href="/services"
+              href="/about#therapists"
               className="bg-primary-500 hover:bg-primary-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg text-center"
             >
               Explore Our Experts

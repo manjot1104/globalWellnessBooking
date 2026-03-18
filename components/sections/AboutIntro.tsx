@@ -29,11 +29,11 @@ export default function AboutIntro() {
               <div className="text-gray-600">Happy Clients</div>
             </div>
             <div className="card p-6 text-center">
-              <div className="text-4xl font-bold text-primary-600 mb-2">50+</div>
+              <div className="text-4xl font-bold text-primary-600 mb-2">10+</div>
               <div className="text-gray-600">Expert Therapists</div>
             </div>
             <div className="card p-6 text-center">
-              <div className="text-4xl font-bold text-primary-600 mb-2">1000+</div>
+              <div className="text-4xl font-bold text-primary-600 mb-2">50000+</div>
               <div className="text-gray-600">Sessions Completed</div>
             </div>
             <div className="card p-6 text-center">

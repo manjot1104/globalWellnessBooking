@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -36,9 +37,17 @@ export default function Navbar() {
       <div className="container-custom">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
-            <div className={`w-10 h-10 rounded-lg flex items-center justify-center ${isScrolled ? 'bg-primary-500' : 'bg-primary-500'}`}>
-              <span className="text-white font-bold text-xl">M</span>
+          <Link href="/" className="flex items-center space-x-3">
+            <div className="w-16 h-16 relative flex-shrink-0">
+              <Image
+                src="/logo.jpeg"
+                alt="Global Wellness Logo"
+                width={64}
+                height={64}
+                className="object-contain"
+                priority
+                unoptimized
+              />
             </div>
             <span className={`text-2xl font-bold ${isScrolled ? 'text-white' : 'text-primary-600'}`}>Global Wellness</span>
           </Link>

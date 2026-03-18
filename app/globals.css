@@ -58,4 +58,13 @@
   .blog-content li {
     @apply ml-4;
   }
+  
+  .logo-no-bg {
+    mix-blend-mode: multiply;
+    filter: contrast(1.1);
+  }
+  
+  .logo-no-bg-white {
+    filter: brightness(0) invert(1);
+  }
 }

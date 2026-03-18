@@ -1,233 +1,116 @@
-'use client'
-
-import { useState } from 'react'
+import Link from 'next/link'
 
 export default function ContactPage() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    subject: '',
-    message: '',
-  })
-
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    })
-  }
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-    setSubmitStatus('idle')
-
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false)
-      setSubmitStatus('success')
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        subject: '',
-        message: '',
-      })
-    }, 1000)
-  }
-
   const contactInfo = [
     {
       icon: (
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
         </svg>
       ),
-      title: 'Email',
+      title: 'Email Us',
       content: 'globalwellness127@gmail.com',
       link: 'mailto:globalwellness127@gmail.com',
+      description: 'Send us an email anytime',
     },
     {
       icon: (
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
         </svg>
       ),
-      title: 'Phone',
+      title: 'Call Us',
       content: '7696730604',
       link: 'tel:7696730604',
-    },
-    {
-      icon: (
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-        </svg>
-      ),
-      title: 'Location',
-      content: 'Global Wellness, 127, I – Block, Sarabha Nagar, Ludhiana',
-      link: '#',
+      description: 'Available 24/7 for your support',
     },
   ]
 
   return (
     <div className="pt-20">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary-50 to-secondary-50 section-padding">
+      <section className="bg-gradient-to-br from-primary-50 via-white to-secondary-50 section-padding">
         <div className="container-custom">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 text-center">
-            Contact <span className="text-primary-600">Us</span>
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto text-center">
-            We're here to help. Reach out to us with any questions or concerns.
-          </p>
-        </div>
-      </section>
-
-      {/* Contact Section */}
-      <section className="section-padding bg-white">
-        <div className="container-custom">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-            {/* Contact Info */}
-            <div>
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">Get in Touch</h2>
-              <div className="space-y-6">
-                {contactInfo.map((info, index) => (
-                  <a
-                    key={index}
-                    href={info.link}
-                    className="flex items-start gap-4 p-4 rounded-lg hover:bg-gray-50 transition-colors"
-                  >
-                    <div className="text-primary-600 mt-1">{info.icon}</div>
-                    <div>
-                      <h3 className="font-semibold text-gray-900 mb-1">{info.title}</h3>
-                      <p className="text-gray-600">{info.content}</p>
-                    </div>
-                  </a>
-                ))}
-              </div>
-              <div className="mt-8 p-6 bg-primary-50 rounded-lg">
-                <h3 className="font-semibold text-gray-900 mb-2">Office Hours</h3>
-                <p className="text-gray-600 mb-1">Monday - Friday: 9:00 AM - 8:00 PM</p>
-                <p className="text-gray-600 mb-1">Saturday: 10:00 AM - 6:00 PM</p>
-                <p className="text-gray-600">Sunday: Closed</p>
-              </div>
-            </div>
-
-            {/* Contact Form */}
-            <div className="lg:col-span-2">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">Send us a Message</h2>
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                      Name *
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      required
-                      value={formData.name}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                      Email *
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      required
-                      value={formData.email}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                    />
-                  </div>
-                </div>
-                <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-                    Phone
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
-                    Subject *
-                  </label>
-                  <select
-                    id="subject"
-                    name="subject"
-                    required
-                    value={formData.subject}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                  >
-                    <option value="">Select a subject</option>
-                    <option value="general">General Inquiry</option>
-                    <option value="booking">Booking Question</option>
-                    <option value="support">Technical Support</option>
-                    <option value="other">Other</option>
-                  </select>
-                </div>
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                    Message *
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    required
-                    rows={6}
-                    value={formData.message}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                  />
-                </div>
-                {submitStatus === 'success' && (
-                  <div className="p-4 bg-green-50 border border-green-200 rounded-lg text-green-800">
-                    Thank you! Your message has been sent successfully. We'll get back to you soon.
-                  </div>
-                )}
-                {submitStatus === 'error' && (
-                  <div className="p-4 bg-red-50 border border-red-200 rounded-lg text-red-800">
-                    Something went wrong. Please try again later.
-                  </div>
-                )}
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="btn-primary w-full disabled:opacity-50 disabled:cursor-not-allowed"
-                >
-                  {isSubmitting ? 'Sending...' : 'Send Message'}
-                </button>
-              </form>
+          <div className="text-center max-w-3xl mx-auto">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+              Get in <span className="text-primary-600">Touch</span>
+            </h1>
+            <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+              We're here to help you 24/7. Reach out to us through email or phone, and our team will get back to you as soon as possible.
+            </p>
+            <div className="inline-flex items-center gap-2 px-6 py-3 bg-primary-100 rounded-full">
+              <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+              <span className="text-primary-700 font-semibold">Available 24/7</span>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Map Section */}
+      {/* Contact Cards */}
+      <section className="section-padding bg-white">
+        <div className="container-custom max-w-4xl">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {contactInfo.map((info, index) => (
+              <a
+                key={index}
+                href={info.link}
+                className="group card p-8 hover:border-primary-300 border-2 border-transparent transition-all duration-300"
+              >
+                <div className="text-center">
+                  <div className="w-20 h-20 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <div className="text-white">
+                      {info.icon}
+                    </div>
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                    {info.title}
+                  </h3>
+                  <p className="text-primary-600 text-lg font-semibold mb-2 break-all">
+                    {info.content}
+                  </p>
+                  <p className="text-gray-600 text-sm">
+                    {info.description}
+                  </p>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="section-padding bg-gradient-to-r from-primary-600 to-secondary-600">
+        <div className="container-custom text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            Ready to Start Your Journey?
+          </h2>
+          <p className="text-xl mb-8 max-w-2xl mx-auto text-white/90">
+            Book your online counselling session today and take the first step towards better mental health.
+          </p>
+          <Link href="/online-counselling" className="bg-white text-primary-600 hover:bg-gray-100 font-semibold py-4 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 inline-block">
+            Book Your Session Now
+          </Link>
+        </div>
+      </section>
+
+      {/* Additional Info */}
       <section className="section-padding bg-gray-50">
-        <div className="container-custom">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">Find Us</h2>
-          <div className="card p-8 bg-gradient-to-br from-primary-50 to-secondary-50">
-            <div className="aspect-video flex items-center justify-center rounded-lg bg-gray-200">
-              <p className="text-gray-500">Map integration would go here</p>
+        <div className="container-custom max-w-4xl">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="text-center">
+              <div className="text-4xl mb-3">⏰</div>
+              <h3 className="font-semibold text-gray-900 mb-2">24/7 Available</h3>
+              <p className="text-gray-600 text-sm">We're always here when you need us</p>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl mb-3">🔒</div>
+              <h3 className="font-semibold text-gray-900 mb-2">100% Confidential</h3>
+              <p className="text-gray-600 text-sm">Your privacy is our priority</p>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl mb-3">💬</div>
+              <h3 className="font-semibold text-gray-900 mb-2">Quick Response</h3>
+              <p className="text-gray-600 text-sm">We respond to all inquiries promptly</p>
             </div>
           </div>
         </div>

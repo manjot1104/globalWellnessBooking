@@ -87,7 +87,7 @@ export default function Therapists() {
             Meet Our <span className="text-primary-600">Expert Therapists</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Licensed professionals dedicated to your mental health and well-being
+            Experienced professionals dedicated to your mental health and well-being
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">

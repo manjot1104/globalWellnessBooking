@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Footer() {
   const services = [
@@ -24,9 +25,16 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 bg-primary-500 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">M</span>
+            <div className="flex items-center space-x-3 mb-4">
+              <div className="w-16 h-16 relative flex-shrink-0">
+                <Image
+                  src="/logo.jpeg"
+                  alt="Global Wellness Logo"
+                  width={64}
+                  height={64}
+                  className="object-contain"
+                  unoptimized
+                />
               </div>
               <span className="text-2xl font-bold">Global Wellness</span>
             </div>
