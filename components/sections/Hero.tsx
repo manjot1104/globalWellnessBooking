@@ -1,11 +1,16 @@
 import Link from 'next/link'
 import CircularText from '@/components/CircularText'
+import AssociateConsultantDropdown from '@/components/AssociateConsultantDropdown'
 
 const HERO_VIDEO_SRC = '/assets/hero-video.mp4'
 
 export default function Hero() {
   return (
-    <section className="min-h-screen bg-primary-900 pt-16 lg:pt-20">
+    <section className="relative min-h-screen bg-primary-900 pt-16 lg:pt-20">
+      <div className="absolute top-20 lg:top-24 right-4 sm:right-6 lg:right-8 z-20">
+        <AssociateConsultantDropdown align="right" />
+      </div>
+
       <div className="container-custom section-padding">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 xl:gap-16 items-center min-h-[calc(100vh-5rem)]">
           {/* Left – Text content */}
