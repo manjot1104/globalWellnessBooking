@@ -69,7 +69,7 @@ export default function OnlineCounsellingPage() {
       <section className="min-h-screen bg-white">
         <div className="w-full h-screen">
           <iframe
-            src="https://booking-employees.vercel.app"
+            src="https://booking-employees.vercel.app/online-counselling"
             className="w-full h-full border-0"
             title="Online Counselling Booking"
             allow="fullscreen"

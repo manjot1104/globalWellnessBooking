@@ -2,17 +2,19 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 interface Member {
   name: string
   role: string
   image: string
+  profileUrl?: string
 }
 
 export default function AboutTherapistCard({ member }: { member: Member }) {
   const [imgError, setImgError] = useState(false)
 
-  return (
+  const card = (
     <div className="relative group overflow-hidden rounded-lg">
       <div className="aspect-[3/4] bg-gradient-to-br from-primary-200 to-secondary-300 flex items-center justify-center relative overflow-hidden">
         {!imgError ? (
@@ -43,4 +45,18 @@ export default function AboutTherapistCard({ member }: { member: Member }) {
       </div>
     </div>
   )
+
+  if (member.profileUrl) {
+    return (
+      <Link
+        href={member.profileUrl}
+        className="block cursor-pointer transition-transform duration-300 hover:scale-[1.02]"
+        aria-label={`View ${member.name}'s profile and book appointment`}
+      >
+        {card}
+      </Link>
+    )
+  }
+
+  return card
 }

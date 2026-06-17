@@ -16,15 +16,15 @@ export default function Footer() {
     { href: '/blog', label: 'Blog' },
     { href: '/contact', label: 'Contact Us' },
     { href: '/faq', label: 'FAQ' },
-    { href: '/online-counselling', label: 'Book Appointment' },
+    { href: '/book-appointment', label: 'Book Appointment' },
   ]
 
   return (
     <footer className="bg-primary-900 text-white">
       <div className="container-custom section-padding">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="flex flex-col md:flex-row flex-wrap lg:flex-nowrap lg:justify-between gap-8 lg:gap-0 w-full">
           {/* Company Info */}
-          <div>
+          <div className="md:w-[calc(50%-1rem)] lg:w-auto lg:max-w-[280px]">
             <div className="flex items-center space-x-3 mb-4">
               <div className="w-16 h-16 relative flex-shrink-0">
                 <Image
@@ -44,7 +44,7 @@ export default function Footer() {
           </div>
 
           {/* Services */}
-          <div>
+          <div className="md:w-[calc(50%-1rem)] lg:w-auto">
             <h3 className="text-lg font-semibold mb-4">Our Services</h3>
             <ul className="space-y-2">
               {services.map((service) => (
@@ -61,7 +61,7 @@ export default function Footer() {
           </div>
 
           {/* Useful Links */}
-          <div>
+          <div className="md:w-[calc(50%-1rem)] lg:w-auto">
             <h3 className="text-lg font-semibold mb-4">Useful Links</h3>
             <ul className="space-y-2">
               {usefulLinks.map((link) => (
@@ -78,7 +78,7 @@ export default function Footer() {
           </div>
 
           {/* Contact Info */}
-          <div>
+          <div className="md:w-[calc(50%-1rem)] lg:w-auto">
             <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
             <ul className="space-y-2 text-gray-300">
               <li>Email: globalwellness127@gmail.com</li>

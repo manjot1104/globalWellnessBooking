@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const therapists = [
   {
@@ -12,6 +13,7 @@ const therapists = [
     title: 'Psychiatrist',
     price: '₹2000',
     expertise: 'Depression, Anxiety, Counselling, OCD, Stress',
+    profileUrl: '/book/6a2e6389e959dc7f4ae6a9d5',
   },
   {
     name: 'Dr. Sunil Kumar',
@@ -21,6 +23,7 @@ const therapists = [
     title: 'Psychologist & CBT Therapist',
     price: '₹1100',
     expertise: 'Stress, Anxiety, Depression, Emotional regulation',
+    profileUrl: '/book/69cb9beaa507074b257e8e27',
   },
   {
     name: 'Dr. Mitali Sharma',
@@ -30,6 +33,7 @@ const therapists = [
     title: 'Clinical Psychologist',
     price: '₹1200',
     expertise: 'Depression, Anxiety, PTSD, LGBTQIA+ mental health',
+    profileUrl: '/book/69cb9beaa507074b257e905c',
   },
   {
     name: 'Dr. Ritu',
@@ -39,6 +43,7 @@ const therapists = [
     title: 'Psychologist',
     price: '₹1200',
     expertise: 'Anxiety, Depression, OCD, Family & Couple counseling',
+    profileUrl: '/book/69cb9beaa507074b257e90cd',
   },
 ]
 
@@ -51,7 +56,7 @@ function TherapistCard({
 }) {
   const [imgError, setImgError] = useState(false)
 
-  return (
+  const card = (
     <div className="card p-6 text-center overflow-hidden">
       <div className="relative w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden bg-primary-100 flex items-center justify-center">
         {!imgError ? (
@@ -76,6 +81,20 @@ function TherapistCard({
       <p className="text-gray-600 text-sm">{therapist.experience} Experience</p>
     </div>
   )
+
+  if ('profileUrl' in therapist && therapist.profileUrl) {
+    return (
+      <Link
+        href={therapist.profileUrl}
+        className="block transition-transform duration-300 hover:scale-[1.02]"
+        aria-label={`View ${therapist.name}'s profile and book appointment`}
+      >
+        {card}
+      </Link>
+    )
+  }
+
+  return card
 }
 
 export default function Therapists() {
@@ -94,11 +113,6 @@ export default function Therapists() {
           {therapists.map((therapist, index) => (
             <TherapistCard key={index} therapist={therapist} index={index} />
           ))}
-        </div>
-        <div className="text-center mt-12">
-          <a href="/about#therapists" className="btn-primary">
-            View All Therapists
-          </a>
         </div>
       </div>
     </section>

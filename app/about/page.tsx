@@ -99,14 +99,14 @@ export default function AboutPage() {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
-              { name: 'Dr. Priyanka Kalra', role: 'Psychiatrist', image: '/therapists/kalrapriyanka.jpeg' },
-              { name: 'Dr. Sunil Kumar', role: 'Psychologist & CBT Therapist', image: '/therapists/sunil-kumar.jpeg' },
-              { name: 'Dr. Mitali Sharma', role: 'Clinical Psychologist', image: '/therapists/mitali-sharma.jpeg' },
-              { name: 'Dr. Ritu', role: 'Psychologist', image: '/therapists/ritu.jpeg' },
-              { name: 'Dr. Vanita Kumari', role: 'Psychologist', image: '/therapists/vanita734722.jpeg' },
+              { name: 'Dr. Priyanka Kalra', role: 'Psychiatrist', image: '/therapists/kalrapriyanka.jpeg', profileUrl: '/book/6a2e6389e959dc7f4ae6a9d5' },
+              { name: 'Dr. Sunil Kumar', role: 'Psychologist & CBT Therapist', image: '/therapists/sunil-kumar.jpeg', profileUrl: '/book/69cb9beaa507074b257e8e27' },
+              { name: 'Dr. Mitali Sharma', role: 'Clinical Psychologist', image: '/therapists/mitali-sharma.jpeg', profileUrl: '/book/69cb9beaa507074b257e905c' },
+              { name: 'Dr. Ritu', role: 'Psychologist', image: '/therapists/ritu.jpeg', profileUrl: '/book/69cb9beaa507074b257e90cd' },
+              { name: 'Dr. Vanita Kumari', role: 'Psychologist', image: '/therapists/vanita734722.jpeg', profileUrl: '/book/69cb9beaa507074b257e8f7a' },
               { name: 'Prithvi Padam', role: 'Psychologist', image: '/therapists/prithvipadam.jpeg' },
-              { name: 'Priyanka Leekha', role: 'Counselling Psychologist', image: '/therapists/leekha.priyanka.jpeg' },
-              { name: 'Ramandeep Kaur', role: 'Psychologist', image: '/therapists/ramandeep.jpeg' },
+              { name: 'Priyanka Leekha', role: 'Counselling Psychologist', image: '/therapists/leekha.priyanka.jpeg', profileUrl: '/book/69cb9beaa507074b257e8f09' },
+              { name: 'Ramandeep Kaur', role: 'Psychologist', image: '/therapists/lordslove89.jpeg', profileUrl: '/book/69cb9beaa507074b257e8feb' },
             ].map((member, index) => (
               <AboutTherapistCard key={member.name} member={member} />
             ))}
@@ -116,3 +116,4 @@ export default function AboutPage() {
     </div>
   )
 }
+ 

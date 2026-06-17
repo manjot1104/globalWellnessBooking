@@ -221,8 +221,13 @@ const blogPosts = [
   },
 ]
 
-export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
-  const post = blogPosts.find((p) => p.id === parseInt(params.id))
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ id: string }>
+}): Promise<Metadata> {
+  const { id } = await params
+  const post = blogPosts.find((p) => p.id === parseInt(id))
   
   if (!post) {
     return {
@@ -236,8 +241,13 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
   }
 }
 
-export default function BlogPostPage({ params }: { params: { id: string } }) {
-  const post = blogPosts.find((p) => p.id === parseInt(params.id))
+export default async function BlogPostPage({
+  params,
+}: {
+  params: Promise<{ id: string }>
+}) {
+  const { id } = await params
+  const post = blogPosts.find((p) => p.id === parseInt(id))
 
   if (!post) {
     notFound()
